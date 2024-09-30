@@ -5,7 +5,8 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { environment } from '../environments/environment';
+import { environment } from '../environment';  // Path to environment.ts is correct
+
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import { environment } from '../environments/environment';
   ],
   imports: [
     BrowserModule,
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp(environment.firebase),  // Firebase initialization
     AngularFirestoreModule,
     ReactiveFormsModule
   ],
