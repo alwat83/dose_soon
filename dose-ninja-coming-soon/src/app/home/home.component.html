@@ -1,0 +1,26 @@
+<div class="hero-section">
+    <h1>Dose Ninja: Your Medication Dosage Tracker</h1>
+    <p>Revolutionize Your Medication Management. Coming Soon!</p>
+    <p>Stay informed and be the first to know when we launch.</p>
+  
+    <form [formGroup]="signUpForm" (ngSubmit)="submitForm()" class="signup-form">
+      <input type="email" placeholder="Enter your email" formControlName="email" [ngClass]="{'error': email?.invalid && email?.touched}" />
+      <button type="submit" [disabled]="signUpForm.invalid">Get Notified</button>
+    </form>
+  
+    <div *ngIf="isSubmitted">
+      <p>Thank you for signing up! We'll notify you soon.</p>
+    </div>
+  </div>
+  
+  <section class="features-section">
+    <h2>Why Choose Dose Ninja?</h2>
+    <ul>
+      <li><strong>Search Your Medication:</strong> Easily find and track prescriptions.</li>
+      <li><strong>Correct Dosage Information:</strong> Ensure accurate dosage with community input.</li>
+      <li><strong>Dosage Correction:</strong> Personalized feedback on medication use.</li>
+      <li><strong>Medication Usage Tracker:</strong> Stay on top of your medication routine.</li>
+      <li><strong>Community Engagement:</strong> Share your experience and learn from others.</li>
+    </ul>
+  </section>
+  
