@@ -1,9 +1,14 @@
 import { Component } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common'; // Import CommonModule
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 
 @Component({
   selector: 'app-home',
+  standalone: true,
+  imports: [ReactiveFormsModule, CommonModule,AngularFireAuthModule], // Include CommonModule here
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
